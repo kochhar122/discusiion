@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dropdown Menu with Search Box | CodingNepal</title>
+  <style>
+.menu-bar{
+    text-align: center;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 5px;
+    font-weight: bold;
+}
+.menu-bar ul li a{
+  text-decoration: none;
+  color: black;
+}
+.sub-menu-1{
+    display: none;
+}
+.menu-bar ul li:hover  .sub-menu-1 {
+     display:block;
+     position: absolute;
+}
+.menu-bar ul li:hover  .sub-menu-1 ul li{
+      width: 200px;
+      padding: 10px;
+      text-align: left;
+
+}
+.menu-bar ul li:hover  .sub-menu-1 ul {
+     display: block;
+     margin: 10px;
+     
+}
+.sub-menu-2{
+    display: none;
+}
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-left: 90px;
+    margin-top: -30px;
+    
+}
+  </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li><a href="#">Explorer</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Explore 2</a></li>
+                        <li><a href="#">Explore 3</a></li>
+                        <li><a href="#">Live Action</a></li>
+                        <li><a href="#">Collection</a></li>
+                        <li><a href="#">Collection 2</a></li>
+                        <li><a href="#">Item Details</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Stats</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Activity</a></li>
+                        <li><a href="#">Rankings</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a href="#">Features</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-me"><a href="#">Headers</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Light Version</a></li>
+                                    <li><a href="#">Dark Version</a></li>
+                                    <li><a href="#">Primary Version</a></li>
+                                    <li><a href="#">Transparent Version</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">Navigation Dropdown</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Light Version</a></li>
+                                    <li><a href="#">Dark Version</a></li>
+                                    <li><a href="#">Primary Version</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"> <a href="#">Second Navigation</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Default Version</a></li>
+                                    <li><a href="#">Alternate Version</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">Page Header</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Left Alignment</a></li>
+                                    <li><a href="#">Center Alignment </a></li>
+                                    <li><a href="#">Light Version</a></li>
+                                    <li><a href="#">Dark Version</a></li>
+                                    <li><a href="#">Primary Version</a></li>
+                                    <li><a href="#">Custom Background</a></li>
+                                    <li><a href="#">Custom Background-2</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">Footer</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Light Version</a></li>
+                                    <li><a href="#">Alternate Version</a></li>
+                                    <li><a href="#">Dark Version</a></li>
+                                    <li><a href="#">Primary Version</a></li>
+                                   
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">Layout Boxed</a> </li>
+                        </ul>
+                </div>
+            <li><a href="#">Pages</a>
+            
+            
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

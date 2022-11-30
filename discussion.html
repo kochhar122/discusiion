@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            padding-top: 20px;
+          
+        }
+
+        .left {
+             left: 0;
+             border-right: 1px solid black;
+        }
+
+        .right {
+              right: 0;
+              
+        }
+
+        .centered {
+            margin-top: 50px;
+           
+        }
+        #btn{
+            padding: 10px;
+            margin-left: 70px;
+            color: white;
+            background-color: blue;
+            border: none;
+        }
+        .input{
+          padding: 10px;
+          margin-left: 90px;
+          border:1px solid lightgrey;
+        }
+        .border{
+            border: 0.5px solid rgb(179, 173, 173);
+            margin-top: 10px;
+        }
+        .centered1 {
+            margin-top: 50px;
+            margin-left: 90px;
+            font-family: 'Times New Roman', Times, serif;
+            
+        }
+        #enter{
+            margin-top: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #input1{
+            margin-top: 10px;
+            padding:5px ;
+            font-size: 12px;
+            border:1px solid lightgrey;
+         
+        }
+        #input2{
+            margin-top: 10px;
+            padding-left:5px ;
+            font-size: 12px;
+            width: 90%;
+            padding-top: 10px;
+            padding-bottom: 50px;
+            border:1px solid lightgrey;
+        
+        }
+        #btn1{
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: blue;
+            border: none;
+            margin-left: 445px;
+            
+        }
+
+        .textarea{
+        
+            border-bottom: solid 1px lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="background-color: #008080;padding-left:20px;color: white;padding-bottom: 10px;position: fixed;width:100% ;">Discussion Portal</h1>
+    </div>
+   
+    <div class="split left">
+        <div class="centered">
+            <button  onclick="myFunction()" id="btn" >New Question Form</button>
+            <input type="text" placeholder="Search Questions" class="input">
+        </div>
+        <div class="border"></div>
+        <div style="background-color: #f5f5f5;width: 100%;height: 83%;">
+            <div id="mydivv" >
+
+                <h1 id="btn4"></h1>
+            </div>
+            
+           
+      
+        <div style=" border: 0.5px solid rgb(179, 173, 173);"></div>
+        </div>
+      </div>
+      
+      <div class="split right">
+        <div class="centered1">
+             <h1 id="welcome">Welcome to Discussion Portal</h1>
+             <h5 id="enter">Enter a subject and question to get selected</h5>
+           
+             <input  placeholder="Subject" id="input1"><br>
+             <textarea placeholder="Question" id="input2"></textarea>
+            
+             <button onclick="mySubmit()" id="btn1" >Submit</button>
+           
+        </div>
+      </div>
+<script>
+function myFunction(){
+    document.getElementById("welcome").innerHTML="Welcome to Discussion Portal";
+    
+}
+function mySubmit(val){
+    
+    
+    
+  
+    let sub = document.getElementById("input1").value;
+    let quo_val = document.getElementById("input2").value;
+    
+    let abcd =document.getElementById("mydivv");
+
+    
+    const htmlRaw = `<div class="textarea">
+        
+                        <h2>${sub}</h2>
+                        <p>${quo_val}</p>
+                        
+                        </div>`;
+
+    const htmlDom = document.createRange().createContextualFragment(htmlRaw);
+
+    abcd.appendChild(htmlDom)
+
+    // var tag = document.createElement("h4");
+    // var qu= document.createElement("h4");
+
+    // var text = document.createTextNode(abc);
+    // var quo_text = document.createTextNode(quo_val);
+
+    // tag.appendChild(text);
+    // qu.appendChild(quo_text);
+
+    // abcd.appendChild(tag);
+    // abcd.appendChild(qu);
+    // document.getElementById("input1").value = '';
+    // document.getElementById("input2").value = '';
+    
+
+    
+   
+}
+</script>
+</body>
+</html>
